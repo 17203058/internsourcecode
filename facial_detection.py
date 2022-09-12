@@ -1,7 +1,5 @@
 import cv2
-import os
 
-os.environ
 cap=cv2.VideoCapture("rtsp://username:password@10.3.0.222:554/cam/realmonitor?channel=1&subtype=1")
 cap.set(3,640) #width set
 cap.set(4,480) #height set
@@ -17,7 +15,4 @@ while True:
     cv2.imshow("Video",img)
     if cv2.waitKey(1)& 0xFF ==ord('q'):
         break
-
-
-
 cv2.waitKey(0)
